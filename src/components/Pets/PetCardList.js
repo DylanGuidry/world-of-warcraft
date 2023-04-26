@@ -1,8 +1,8 @@
 import React from "react";
 import './PetCardList.css'
-import darkgoat from './Images/dark-goat.jpg'
-import scout from './Images/scout.jpg'
-import shadow from './Images/shadow.jpg'
+import darkgoat from '../Images/dark-goat.jpg'
+import scout from '../Images/scout.jpg'
+import shadow from '../Images/shadow.jpg'
 
 function PetCardList({ pets }) {
     return(

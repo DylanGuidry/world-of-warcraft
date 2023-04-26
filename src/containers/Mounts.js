@@ -1,21 +1,21 @@
 import React, {  useState, useEffect } from "react";
-import './Pets.css'
+import './Mounts.css'
 import Navbar from "../components/NavBar";
-import PetSearch from "../components/Pets/PetsSearch";
-import PetCardList from '../components/Pets/PetCardList'
+import MountSearch from "../components/Mounts/MountSearch";
+import MountList from '../components/Mounts/MountList'
 
-function Pets() {
-    const [pets, setPets] = useState([])
+function Mounts() {
+    const [mounts, setMounts] = useState([])
     const [searchfield, setsearchfield] = useState('')
 
     useEffect(() => {
         //Fetching an API (data)
-        fetch('https://us.api.blizzard.com/data/wow/pet/index?namespace=static-us&locale=en_US&access_token=USSWtcYeDoYM7br4y4jFAT1LD2C2Q2rW9n')
+        fetch('https://us.api.blizzard.com/data/wow/mount/index?namespace=static-us&locale=en_US&access_token=USSWtcYeDoYM7br4y4jFAT1LD2C2Q2rW9n')
         //Converting that data into readable json
         .then(response =>  response.json())
         //Setting the state to the user data that is returned by the API
-        .then(pets => {
-            setPets(pets.pets)
+        .then(mounts => {
+            setMounts(mounts.mounts)
         })
     }, [])
 
@@ -24,21 +24,22 @@ function Pets() {
         setsearchfield(event.target.value)
     }
 
-    const filteredPets = pets.filter(pets => {
+    const filteredMounts = mounts.filter(mounts => {
         //If anything includes what is in the input string then return it from the DB
-        return pets.name.toLocaleLowerCase().includes(searchfield.toLocaleLowerCase())
+        return mounts.name.toLocaleLowerCase().includes(searchfield.toLocaleLowerCase())
     })
+
     return(
         <div>
+            <Navbar />
             <div>
-                <Navbar />
+            <MountSearch searchChange={onSearchChange}/>
+            <div>
+                <MountList mounts={filteredMounts}/>
             </div>
-                <PetSearch searchChange={onSearchChange}/>
-            <div>
-                <PetCardList pets={filteredPets}/>
             </div>
         </div>
     )
 }
 
-export default Pets
+export default Mounts
