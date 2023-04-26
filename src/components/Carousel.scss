@@ -1,0 +1,107 @@
+$size-width: 99.1vw;
+$size-height: 500px;
+
+.carousel-wrapper {
+    width: $size-width;
+    height: $size-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10%;
+}
+
+.carousel-container {
+    width: 70vw;
+    height: $size-height;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 10px 10px 20px #00000056;
+    border: 5px solid #134074;
+}
+
+.carousel {
+    display: flex;
+    width: $size-width * 3;
+    animation: sliding 12s infinite;
+div {
+    width: $size-width;
+    height: $size-height;
+    background-size: cover;
+    background-position: center;
+}
+&
+.image-one {
+    background-image: url("./Images/pet1.png");
+}
+.image-two {
+    background-image: url("./Images/pet2.jpg");
+}
+.image-three {
+    background-image: url("./Images/pets3.png");
+}
+}
+
+@keyframes sliding {
+30% {
+    transform: translateX(0);
+}
+35% {
+    transform: translateX(-$size-width);
+}
+65% {
+    transform: translateX(-$size-width);
+}
+70% {
+    transform: translateX(-$size-width * 2);
+}
+98% {
+    transform: translateX(-$size-width * 2);
+}
+100% {
+    transform: translateX(0);
+}
+}
+
+@media screen and (max-width: 768px) {
+    $size-width: 240px;
+    $size-height: 150px;
+.carousel-wrapper {
+    width: $size-width * 1.3;
+    height: $size-height * 1.4;
+}
+
+.carousel-container {
+    width: $size-width;
+    height: $size-height;
+}
+
+.carousel {
+    width: $size-width * 3;
+    > div {
+        width: $size-width;
+        height: $size-height;
+    }
+}
+
+@keyframes sliding {
+    30% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-$size-width);
+    }
+    65% {
+        transform: translateX(-$size-width);
+    }
+    70% {
+      transform: translateX(-$size-width * 2);
+    }
+    98% {
+      transform: translateX(-$size-width * 2);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
+}

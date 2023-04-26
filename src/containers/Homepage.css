@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.tittle-and-image {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Bebas Neue';
+    align-items: center;
+    font-size: xx-large;
+}
+
+.corgi {
+    border-radius: 100px;
+    border: 5px solid #134074;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    width: 500px;
+}
+
+.tittle {
+    width: 40%;
+    text-align: center;
+}
+
+.click-me {
+    cursor: pointer;
+    color: #134074;
+    text-decoration: none;
+}
