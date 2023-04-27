@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-.main-container {
+.main-container-input {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    position:fixed;
+    width: 30%;
 }
 
 .input {
