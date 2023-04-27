@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.Portrait {
+    width: 80%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    border: 5px solid #134074;
+}
+.all-about-dev {
+    width: 100%;
+}
+.meeting-the-dev {
+    width: 100%;
+    font-size: x-large;
+}
+.about-us-des {
+    width: 100%
+}
+
+.about-us-container {
+    margin-bottom: 8%;
+    margin-left: 5%;
+}
+
+.overall-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+}
+
+.meeting-the-dev {
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue';
+    margin-left: 0;
+    text-align: center;
+    border-bottom: 2px solid white;
+}
+
+.about-us-des {
+    border: 5px solid #134074;
+    padding: 2%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    background-color: #0B2545;
+    width: 40%;
+}
+
+.all-about-dev {
+    font-family: 'Bebas Neue';
+    color: white;
+    text-align: center;
+}
+
+.link-box {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Bebas Neue';
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    justify-content: center;
+}
+
+.Linked-ones {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.horde-image {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    border: 5px solid #134074;
+}

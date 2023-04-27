@@ -31,7 +31,7 @@ function Homepage() {
                     </div>
                     <div className="tittle">
                     Mounts are a much sought after form of transportation in which players ride atop the backs of various more or less exotic beasts (or machines). They can be accessed via the Mounts and Pets window. Warlocks, paladins and death knights can learn to summon mounts as a class perk. The Alliance Worgen have a race skill Running Wild that they will get at level 20. Druids can shape shift into multiple forms that improve their speed. Mounted travel is almost always faster than walking/running (some vanity mounts such as Sea Turtle provide no speed benefit on the ground). World of Warcraft: The Burning Crusade The Burning Crusade introduced flying mounts in select areas, which further increased the maximum possible player movement speed. World of Warcraft: Cataclysm Cataclysm opened up much of Azeroth to flying mounts.
-                    <a href="/mounts/" className="click-me"> (Click Here to Explore Mounts)</a>
+                    <a href="/mounts/" className="click-me"> (Click Here to Explore Mounts.)</a>
                     </div>
                 </div>
             </div>
