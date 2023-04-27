@@ -3,6 +3,7 @@ import './PetCardList.css'
 import darkgoat from '../Images/dark-goat.jpg'
 import scout from '../Images/scout.jpg'
 import shadow from '../Images/shadow.jpg'
+import { NavLink } from "react-router-dom";
 
 function PetCardList({ pets }) {
     return(
@@ -19,7 +20,9 @@ function PetCardList({ pets }) {
                 return(
                     <div className="main-result-container ">
                         <div className="results-container">
-                            <h1 className="results">{petItems.name}</h1>
+                            <NavLink className="nav-link" to={`/petsDetails/${petItems.id}`}>
+                                <h1 className="results">{petItems.name}</h1>
+                            </NavLink>
                         </div>
                     </div>
                 )

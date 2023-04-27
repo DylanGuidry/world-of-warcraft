@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './MountList.css'
 import snail from '../Images/snail-mount.jpg'
 import multi from '../Images/muli-mount.jpg'
@@ -19,7 +20,9 @@ function MountList({ mounts }) {
                 return(
                     <div className="main-result-container ">
                         <div className="results-container">
+                            <NavLink className="nav-link" to={`/mountDetails/${mountItems.id}`}>
                             <h1 className="results">{mountItems.name}</h1>
+                            </NavLink>
                         </div>
                     </div>
                 )
