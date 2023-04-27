@@ -1,6 +1,7 @@
 import React from "react";
 import './MountSearch.css'
 
+//Taking in our searchChange function
 function MountSearch({ searchChange }) {
     return(
         <div>

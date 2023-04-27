@@ -1,11 +1,12 @@
 import React from "react";
 import './Homepage.css'
-import SearchBar from "../components/SearchBar";
 import Navbar from "../components/NavBar";
 import corgi from '../components/Images/molten-corgi.jpg'
 import mount from '../components/Images/mount.jpg'
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
+import petTab from '../components/Images/pets-tab.png'
+import mountsTab from '../components/Images/mounts-tab.jpg'
 
 function Homepage() {
     return (
@@ -13,9 +14,25 @@ function Homepage() {
             <div>
                 <div>
                     <Navbar />
-                    <SearchBar />
-                    <Carousel />
+                    <div className="big-title-container">
+                        <h1 className="big-title">EXPLORE WOLRD OF WARCRAFTS BATTLE PET AND MOUNT COLLECTION!</h1>
+                    </div>
+                    <div className="photo-tab">
+                        <a href="/mounts/" className="tab-anchor">
+                            <div className="photo-and-caption">
+                                <img className="tabs" src={mountsTab}/>
+                                <h1>Mounts</h1>
+                            </div>
+                        </a>
+                        <a href="/pets/" className="tab-anchor">
+                        <div className="photo-and-caption">
+                            <img className="tabs" src={petTab}/>
+                            <h1>Pets</h1>
+                        </div>
+                        </a>
+                    </div>
                 </div>
+                <Carousel />
                 <div className="tittle-and-image">
                     <div className="tittle">
                     WoW Pet Battles are a new type of turn-based mini-game within World of Warcraft. Pet Battles allow players to raise their companions’ level (up to level 25), capture wild pets, and even battle other players' companions.
