@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.icon-pet {
+    border: 3px solid #134074;
+    width: 60px;
+}
+
+.pet-detail-container {
+    width: 50%;
+    display: flex;
+    padding: 40px;
+    margin-top: 10%;
+    font-family: 'Bebas Neue';
+    letter-spacing: 2px;
+    color: black;
+    text-align: left;
+}
+
+.big {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+    margin-left: 10%;
+    margin-top: 0;
+    padding: 15px;
+    font-size: large;
+    border: 3px solid #134074;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+}
+
+.name-and-icon {
+    padding: 15px;
+    border: 3px solid #134074;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+}
+
+.des-abilities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.abilities {
+    text-align: center;
+    border: 3px solid #134074;
+    padding: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+}
+
+.ability-contrainer {
+    display: flex;
+}
+
+.corgi-gif {
+    border: 3px solid #134074;
+    border-radius: 3px;
+    width: 100px;
+}

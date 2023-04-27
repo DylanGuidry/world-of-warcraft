@@ -40,5 +40,9 @@
     font-family: 'Bebas Neue';
     text-align: center;
     margin: 60px;
+}
 
+.nav-link {
+    text-decoration: none;
+    color: white;
 }
