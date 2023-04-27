@@ -5,6 +5,7 @@ import snail from '../Images/snail-mount.jpg'
 import multi from '../Images/muli-mount.jpg'
 import mount from '../Images/otter.jpg'
 
+//We are passing mount from our App.js to access the props
 function MountList({ mounts }) {
     return(
         <div>
@@ -20,6 +21,7 @@ function MountList({ mounts }) {
                 return(
                     <div className="main-result-container ">
                         <div className="results-container">
+                            {/* NavLink to link to the specific ID from our api call */}
                             <NavLink className="nav-link" to={`/mountDetails/${mountItems.id}`}>
                             <h1 className="results">{mountItems.name}</h1>
                             </NavLink>

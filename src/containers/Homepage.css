@@ -27,3 +27,48 @@
     color: #134074;
     text-decoration: none;
 }
+
+.photo-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+.tabs {
+    width: 525px;
+    height: 300px;
+    border: 5px solid #134074;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    cursor: pointer;
+}
+
+.photo-and-caption {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+}
+
+.tab-anchor {
+    color: black;
+    cursor: pointer;
+}
+
+.big-title {
+    text-align: center;
+    margin: 5%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-title-container {
+    border: 5px solid #134074;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.151);
+    background-color: #0b2545da;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
