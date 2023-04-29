@@ -17,7 +17,7 @@ function PetsDetails() {
     }, [])
 
     const fetchPetDetails = (petid) => {
-        const PetDetailsURL = `https://us.api.blizzard.com/data/wow/pet/${petid}?namespace=static-us&locale=en_US&access_token=USSWtcYeDoYM7br4y4jFAT1LD2C2Q2rW9n`
+        const PetDetailsURL = `https://us.api.blizzard.com/data/wow/pet/${petid}?namespace=static-us&locale=en_US&access_token=USmdhBF4kA1xb3B0QVvPLSX5OlkTAr5Of4`
         fetch(PetDetailsURL)
         .then(response => response.json())
         .then(petItem => setpetDetails(petItem))

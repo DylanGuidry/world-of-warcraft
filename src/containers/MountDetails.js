@@ -17,7 +17,7 @@ function MountDetails() {
     }, [])
 
     const fetchMountFetch = (mountid) => {
-        const MountDetailsURL = `https://us.api.blizzard.com/data/wow/mount/${mountid}?namespace=static-us&locale=en_US&access_token=USSWtcYeDoYM7br4y4jFAT1LD2C2Q2rW9n`
+        const MountDetailsURL = `https://us.api.blizzard.com/data/wow/mount/${mountid}?namespace=static-us&locale=en_US&access_token=USmdhBF4kA1xb3B0QVvPLSX5OlkTAr5Of4`
         fetch(MountDetailsURL)
         .then(response => response.json())
         .then(mountItem => setMountDetails(mountItem))

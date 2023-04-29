@@ -10,7 +10,7 @@ function Pets() {
 
     useEffect(() => {
         //Fetching an API (data)
-        fetch('https://us.api.blizzard.com/data/wow/pet/index?namespace=static-us&locale=en_US&access_token=USSWtcYeDoYM7br4y4jFAT1LD2C2Q2rW9n')
+        fetch('https://us.api.blizzard.com/data/wow/pet/index?namespace=static-us&locale=en_US&access_token=USmdhBF4kA1xb3B0QVvPLSX5OlkTAr5Of4')
         //Converting that data into readable json
         .then(response =>  response.json())
         //Setting the state to the user data that is returned by the API
