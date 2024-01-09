@@ -4,20 +4,31 @@ import Navbar from "../components/NavBar";
 import PetSearch from "../components/Pets/PetsSearch";
 import PetCardList from '../components/Pets/PetCardList'
 
-function Pets() {
+function Pets({ accessToken }) {
     const [pets, setPets] = useState([])
     const [searchfield, setsearchfield] = useState('')
 
     useEffect(() => {
-        //Fetching an API (data)
-        fetch('https://us.api.blizzard.com/data/wow/pet/index?namespace=static-us&locale=en_US&access_token=USmdhBF4kA1xb3B0QVvPLSX5OlkTAr5Of4')
-        //Converting that data into readable json
-        .then(response =>  response.json())
-        //Setting the state to the user data that is returned by the API
-        .then(pets => {
-            setPets(pets.pets)
-        })
-    }, [])
+        if (!accessToken) {
+            return; // If access token is not available, do not proceed with the API call
+        }
+
+        // Fetching mount data from the Blizzard API using the provided access token
+        fetch('https://us.api.blizzard.com/data/wow/pet/index?namespace=static-us&locale=en_US&access_token=' + accessToken)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Failed to fetch data');
+            })
+            .then(mountsData => {
+                setPets(mountsData.pets || []);
+                console.log(mountsData);
+            })
+            .catch(error => {
+                console.error('Error fetching mount data:', error);
+            });
+    }, [accessToken]);
 
     const onSearchChange = (event) => {
         //Chaning the state based on the targeted value in the searchbox
