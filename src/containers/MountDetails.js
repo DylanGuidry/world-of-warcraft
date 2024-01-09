@@ -6,9 +6,11 @@ import './PetDetails.css'
 import dragon from '../components/Images/dragon.gif'
 import horse from '../components/Images/swiftgloomhoof.gif'
 
-function MountDetails() {
+function MountDetails({ accessToken }) {
     const [mountDetails, setMountDetails] = useState([])
     const params = useParams()
+
+    console.log('Access Token:', accessToken);
 
     useEffect(() => {
         const mountid = params.id
@@ -17,7 +19,7 @@ function MountDetails() {
     }, [])
 
     const fetchMountFetch = (mountid) => {
-        const MountDetailsURL = `https://us.api.blizzard.com/data/wow/mount/${mountid}?namespace=static-us&locale=en_US&access_token=USmdhBF4kA1xb3B0QVvPLSX5OlkTAr5Of4`
+        const MountDetailsURL = (`https://us.api.blizzard.com/data/wow/mount/${mountid}?namespace=static-us&locale=en_US&access_token=`+ accessToken)
         fetch(MountDetailsURL)
         .then(response => response.json())
         .then(mountItem => setMountDetails(mountItem))
