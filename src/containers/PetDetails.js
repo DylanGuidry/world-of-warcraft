@@ -7,70 +7,61 @@ import cat from '../components/Images/cat.gif'
 import Footer from '../components/Footer'
 
 function PetsDetails({ accessToken }) {
-    const [petDetails, setpetDetails] = useState([])
+    const [petDetails, setPetDetails] = useState([])
     const params = useParams()
 
     useEffect(() => {
-        const petid = params.id
-        console.log(petid)
-        fetchPetDetails(petid)
+        const petId = params.id
+        console.log(petId)
+        fetchPetDetails(petId)
     }, [])
 
-    const fetchPetDetails = (petid) => {
-        const PetDetailsURL = (`https://us.api.blizzard.com/data/wow/pet/${petid}?namespace=static-us&locale=en_US&access_token=`+ accessToken)
+    const fetchPetDetails = (petId) => {
+        const PetDetailsURL = (`https://us.api.blizzard.com/data/wow/pet/${petId}?namespace=static-us&locale=en_US&access_token=` + accessToken)
         fetch(PetDetailsURL)
-        .then(response => response.json())
-        .then(petItem => setpetDetails(petItem))
+            .then(response => response.json())
+            .then(petItem => setPetDetails(petItem))
     }
 
     console.log(petDetails)
 
-    if(petDetails.length === 0) {
-        return(
-            <h1>Loding</h1>
+    if (petDetails.length === 0) {
+        return (
+            <h1>Loading</h1>
         )
     } else {
-    return(
-        <div>
+        return (
             <div>
                 <Navbar />
-            </div>
-            <div className="big">
-                <div className="pet-detail-container">
-                    <div>
-                        <div className="name-and-icon">
-                            <img className="icon-pet" src={petDetails.icon}/>
-                            <h1>Name: {petDetails.name}</h1>
-                            <h1>Type: {petDetails.battle_pet_type.name}</h1>
-                        </div>
-                    </div>
-                    <div className="des-abilities">
-                        <div>
-                            <p className="description">
-                            <img className="corgi-gif" src={butt}/>
-                                <h1>Short Description:</h1>
-                                {petDetails.description}
-                            </p>
-                        </div>
-                        <div className="ability-contrainer">
-                            <div className="abilities">
-                                <h1>abilities:</h1>
-                                <h1>1. {petDetails.abilities[0].ability.name}</h1>
-                                <h1>2. {petDetails.abilities[1].ability.name}</h1>
-                                <h1>3. {petDetails.abilities[2].ability.name}</h1>
-                                <h1>4. {petDetails.abilities[3].ability.name}</h1>
-                                <h1>5. {petDetails.abilities[4].ability.name}</h1>
-                                <h1>6. {petDetails.abilities[5].ability.name}</h1>
-                                <img className="cat" src={cat} width='80px'/>
+
+                <div className="container mt-4">
+                    <div className="row justify-content-center">
+                        <div className="col-md-8 mb-4">
+                            <div className="card text-center border-primary bg-primary-subtle">
+                                <img className="card-img-top w-10 mx-auto mt-2 mb-2" src={petDetails.icon} alt={petDetails.name} />
+                                <div className="card-body shadow">
+                                    <h5 className="card-title fw-bold">Name: {petDetails.name}</h5>
+                                    <p className="card-text fw-bold">Type: {petDetails.battle_pet_type.name}</p>
+                                    <img className="card-img-bottom w-50 mx-auto mt-2 mb-2" src={butt} alt="Short Description" width='150px' />
+                                    <h5 className="card-title fw-bold">Short Description:</h5>
+                                    <p className="card-text">{petDetails.description}</p>
+                                    <h5 className="card-title fw-bold">Abilities:</h5>
+                                    <ul className="list-group list-group-flush">
+                                        {petDetails.abilities.map((ability, index) => (
+                                            <li key={index} className="border-primary bg-primary-subtle list-group-item">{index + 1}. {ability.ability.name}</li>
+                                        ))}
+                                    </ul>
+                                    <img className="card-img-bottom w-50 mx-auto mt-2 mb-2" src={cat} alt="Abilities Cat" width='80px' />
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-            </div>
-            <Footer />
-        </div>
-    )
-}}
 
-export default PetsDetails
+                <Footer />
+            </div>
+        )
+    }
+}
+
+export default PetsDetails;

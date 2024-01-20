@@ -1,21 +1,26 @@
-
-import React from 'react'
-import './Carousel.scss'
+import React from 'react';
+import './Carousel.scss';
+import imageone from './Images/pet1.png';
+import imagetwo from './Images/pet2.jpg';
+import imagethree from './Images/pets3.png';
 
 function Carousel() {
     return (
         <div>
-            <div className="carousel-wrapper">
-                <div className="carousel-container">
-                    <div className="carousel">
-                        <div className="image-one"></div>
-                        <div className="image-two"></div>
-                        <div className="image-three"></div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
-    )
+    );
 }
 
-export default Carousel
+export default Carousel;
+
+
+// .image-one {
+//     background-image: url("./Images/pet1.png");
+// }
+// .image-two {
+//     background-image: url("./Images/pet2.jpg");
+// }
+// .image-three {
+//     background-image: url("./Images/pets3.png");
+// }
