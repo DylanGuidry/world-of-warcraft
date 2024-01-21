@@ -21,7 +21,7 @@ function Homepage() {
                     <div className="col-md-6 mb-4 w-75 mt-4">
                         <a href="/pets/" className="tab-anchor text-decoration-none">
                             <div className="card text-center border-primary bg-primary-subtle shadow">
-                                <img className="card-img-top w-100" src={petTab} alt="Pets" />
+                                <img className="card-img-top w-100" src={corgi} alt="Pets" />
                                 <div className="card-body">
                                     <h5 className="card-title fw-bold">Pet Battles</h5>
                                     <p className="card-text">
@@ -40,7 +40,7 @@ function Homepage() {
                     <div className="col-md-6 mb-4 w-75">
                         <a href="/mounts/" className="tab-anchor text-decoration-none">
                             <div className="card text-center border-primary bg-primary-subtle shadow">
-                                <img className="card-img-top" src={mountsTab} alt="Mounts" />
+                                <img className="card-img-top" src={mount} alt="Mounts" />
                                 <div className="card-body">
                                     <h5 className="card-title fw-bold">Mounts</h5>
                                     <p className="card-text">
@@ -53,38 +53,7 @@ function Homepage() {
                         </a>
                     </div>
                 </div>
-
-                <div className="row justify-content-center">
-                    <div className="col-md-6 mb-4">
-                        <div className="card text-center border-primary bg-primary-subtle shadow">
-                            <img className="card-img-top" src={corgi} alt="Corgi" />
-                            <div className="card-body">
-                                <h5 className="card-title fw-bold">WoW Pet Battles</h5>
-                                <p className="card-text">
-                                    WoW Pet Battles are a new type of turn-based mini-game within World of Warcraft.
-                                    Pet Battles allow players to raise their companions’ level (up to level 25),
-                                    capture wild pets, and even battle other players' companions.
-                                    <a href='/pets/' className="click-me fw-bold"> (Click Here to Explore Battle Pets.)</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-6 mb-4">
-                        <div className="card text-center border-primary bg-primary-subtle shadow">
-                            <img className="card-img-top" src={mount} alt="Mount" />
-                            <div className="card-body">
-                                <h5 className="card-title fw-bold">WoW Mounts</h5>
-                                <p className="card-text">
-                                    Mounts are a much sought after form of transportation in which players ride atop
-                                    the backs of various more or less exotic beasts (or machines).
-                                    <a href="/mounts/" className="click-me fw-bold"> (Click Here to Explore Mounts.)</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
             <Footer />
         </div>
     );

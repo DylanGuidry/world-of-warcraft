@@ -27,7 +27,9 @@ function PetsDetails({ accessToken }) {
 
     if (petDetails.length === 0) {
         return (
-            <h1>Loading</h1>
+            <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         )
     } else {
         return (

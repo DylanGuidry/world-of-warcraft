@@ -1,34 +1,28 @@
 import React from "react";
-import './PetCardList.css'
-import darkgoat from '../Images/dark-goat.jpg'
-import scout from '../Images/scout.jpg'
-import shadow from '../Images/shadow.jpg'
+import './PetCardList.css';
 import { NavLink } from "react-router-dom";
 
 function PetCardList({ pets }) {
-    return(
+    return (
         <div>
-            <div>
+            <div className="container mt-4">
                 <h1 className="title">Welcome To the Battle Pets Search Page</h1>
-            </div>
-                <div className="image-containers">
-                    <img className="images" src={darkgoat}/>
-                    <img className="images" src={scout}/>
-                    <img className="images" src={shadow}/>
-                </div>
-            {pets.map((petItems) => {
-                return(
-                    <div className="main-result-container ">
-                        <div className="results-container">
-                            <NavLink className="nav-link" to={`/petsDetails/${petItems.id}`}>
-                                <h1 className="results">{petItems.name}</h1>
-                            </NavLink>
+                <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    {pets.map((petItems, index) => (
+                        <div key={index} className="col">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <NavLink className="nav-link" to={`/petsDetails/${petItems.id}`}>
+                                        <h5 className="card-title fw-bold" style={{ color: 'black' }}>{petItems.name}</h5>
+                                    </NavLink>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
+                    ))}
+                </div>
+            </div>
         </div>
-    )
+    );
 }
 
-export default PetCardList
+export default PetCardList;
